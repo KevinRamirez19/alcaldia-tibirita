@@ -1,0 +1,118 @@
+.container {
+    padding: 2rem;
+    max-width: 1450px;
+    margin: auto;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+  
+  }
+  
+  .institutional-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  
+  .logo {
+    width: 60px;
+    height: auto;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #003366;
+  }
+  
+  .card {
+    background-color: white;
+    border-left: 6px solid #003366;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .card h2 {
+    color: #003366;
+    margin-top: 1rem;
+  }
+  
+  .card p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color : #555;
+  }
+  
+  .card-image {
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Animations */
+  .animate-fade {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Social buttons */
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .social {
+    padding: 0.7rem 1.5rem;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fb {
+    background-color: #1877f2;
+  }
+  
+  .fb:hover {
+    background-color: #145dbf;
+  }
+  
+  .tw {
+    background-color: #1da1f2;
+  }
+  
+  .tw:hover {
+    background-color: #0d8ddb;
+  }
+  
+  .yt {
+    background-color: #ff0000;
+  }
+  
+  .yt:hover {
+    background-color: #cc0000;
+  }
+  

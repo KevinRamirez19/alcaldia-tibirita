@@ -1,0 +1,53 @@
+.tramites-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+  }
+  
+  .tramites-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .tramite-item {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tramite-item h2 {
+    font-size: 1.5rem;
+    color: #34495e;
+  }
+  
+  .tramite-item p {
+    font-size: 1rem;
+    color: #7f8c8d;
+  }
+  
+  .tramite-item a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .tramite-item a:hover {
+    text-decoration: underline;
+  }
+  
