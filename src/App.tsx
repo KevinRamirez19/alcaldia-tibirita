@@ -1,29 +1,45 @@
-import { Routes, Route, useNavigate } from 'react-router-dom'
-import Home from './Pages/HomePage/Home'
-import Noticias from "./Pages/NoticiasPage/Noticias"
-import Sitios_Turisticos from "./Pages/Sitios_TuristicosPage/Sitios_Turisticos"
-import Mision_vision from "./Pages/Mision_visionPage/Mision_vision"
-import Tramites_servicios from "./Pages/Tramites_serviciosPage/Tramites_servicios"
+import { useEffect } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+
+import Home from './Pages/HomePage/Home';
+import Noticias from "./Pages/NoticiasPage/Noticias";
+import Sitios_Turisticos from "./Pages/Sitios_TuristicosPage/Sitios_Turisticos";
+import Mision_vision from "./Pages/Mision_visionPage/Mision_vision";
+import Tramites_servicios from "./Pages/Tramites_serviciosPage/Tramites_servicios";
 import 'leaflet/dist/leaflet.css';
-import Transparencia from "./Pages/TransparenciaPage/Transparencia"
-import Testimonios from "./Pages/TestimoniosPage/Testimonios"
-import MapaTibirita from './Pages/MapaTibirita/MapaTibirita'
-import Login from './Pages/LoginPage/Login'
-import Politicas from './Pages/PoliticasPage/Politicas'
-import Registro from './Pages/LoginPage/Registro'
+import Transparencia from "./Pages/TransparenciaPage/Transparencia";
+import Testimonios from "./Pages/TestimoniosPage/Testimonios";
+import MapaTibirita from './Pages/MapaTibirita/MapaTibirita';
+import Login from './Pages/LoginPage/Login';
+import Politicas from './Pages/PoliticasPage/Politicas';
+import Registro from './Pages/LoginPage/Registro';
+
 function MyComponent() {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
-    navigate('/tramites-servicios'); // Cambia la ruta a la que deseas navegar
+    navigate('/tramites-servicios');
   };
+
   return (
     <div>
       <button onClick={handleButtonClick}>Ir a Trámites y Servicios</button>
     </div>
   );
 }
+
 function App() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "//code.tidio.co/njq6v1izpqt7sqa3jt7vab8wvvkpxa1n.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -37,12 +53,9 @@ function App() {
       <Route path="/Login" element={<Login />} />
       <Route path="/transparencia" element={<Transparencia />} />
       <Route path="/MyComponent" element={<MyComponent />} />
-      <Route path="Registro" element={<Registro />} />
+      <Route path="/Registro" element={<Registro />} />
     </Routes>
-
-  )
+  );
 }
 
-export default App
-
-
+export default App;
