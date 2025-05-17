@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Button, Input, Select, Card, Switch } from 'antd';
 import CountUp from 'react-countup';
 import { ArrowUpOutlined } from '@ant-design/icons';
-import './testimonios.css';
+import './Testimonios.css';
 
 const { Option } = Select;
 
